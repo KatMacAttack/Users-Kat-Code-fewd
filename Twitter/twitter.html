@@ -7,44 +7,54 @@
     <link rel="stylesheet" href="twitter.css">
   </head>
   <body>
-
-    <header>
+<header>
       <h1>Twitter</h1>
       <nav>
-          <li><button>Sign Up</button></li>
-          <li><button>Log In</button></li>
+      <ul class="inline-list">
+          <li>
+            <a href="#" class="button">Sign Up</a>
+          </li>
+          <li>
+            <a href="#" class="button">Log In</a>
+          </li>
       </nav>
     </header>
 
     <main>
+      <form class="tweet">
       <div class="commentrow">
         <img src="datboi.jpg" alt="avatar">
-        <section>
-          <div class="new-comment">
-          <textarea name="comment" placeholder="What's Happening?" rows="8" cols="40" character-limit="140"></textarea>
-          <span class="character-limit">140</span>
-          </div>
-          <span class=tweet-button><button type="button" name="tweet">Tweet</button></span>
-          </section>
       </div>
+      <div class="twit">
+      <div class="counter-container">
+        <div class="Character-Count">140</div>
+        <textarea placeholder="Oh shit whaddup?"></textarea>"
+      </div>
+      <input type="submit" value="Tweet" class="button">
+    </div>
+  </form>
 
-      <div class="row2">
-        <img src="tigerbunny.jpg" alt="avatar">
+
+    <div class="row2">
+      <li class="tweet">
+      <div class="avatars">
+      <img src="tigerbunny.jpg" alt="avatar">
+    </div>
         <section>
           <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
           <a href="#"> Like </a> <span class="count"> (0) </span>
         </section>
       </div>
-
-      <div class="row">
+      <div class="Twit">
         <img src="Cathy.jpg" alt="avatar">
-        <section>
+      </div>
+      <div class="tweet-actions">
           <p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
           <a href="#"> Like </a> <span class="count"> (0) </span>
         </section>
       </div>
 
-      <div id="row3" class="row">
+      <div class="tweet-actions">
         <img src="Kat.jpg" alt="avatar">
         <section>
           <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
