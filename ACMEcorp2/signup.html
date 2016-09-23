@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ACME Corp</title>
+    <link rel="stylesheet" href="css/acme2.css">
+    <style media="screen">
+    .product-info {
+      display: inline-block;
+      margin: 20px, 0px;
+    }
+    p.description{
+      text-align: left;
+      margin-top:20px;
+      box:2;
+    }
+    .images{
+      max-width: 200px;
+      display: inline;
+      float: left;
+      box: 1;
+    }
+</style>
+</head>
+<header>
+<img src="images/acme-corp.jpg" alt="acme corp logo" height="70px" style="float:left"> </img>
+<nav>
+<ul>
+  <li>
+    <a href="">Products</a>
+  </li>
+  <li><a href="">
+    <button>Sign Up</button>
+  </a>
+</li>
+</ul>
+</nav>
+</header>
+
+    <main>
+      <h1>Sign Up</h1>
+      <form action="index.html" method:"post"></form>
+      <fieldset>
+        <div class="form-row">
+          <label for="first-name">First Name</label>
+          <input type="text" name="first-name" id="first-name" placeholder="John">
+        </div>
+        <div class="form-row">
+          <label for="last-name">Last Name</label>
+          <input type="text" name="last-name" id="last-name" placeholder="Doe">
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="John.Doe@example.com">
+        </div>
+        <div class="form-row">
+          <label for="password">Password</label>
+          <input type="text" name="password" id="password" placeholder="xxxxx">
+        </div>
+        <div class="form-row">
+          <label for="survey">How did you hear about us?</label>
+          <select name="survey" id="survey">
+            <option value="Looney Tunes">Dat Boi</option>
+            <option value="Road Runner">Avand</option>
+            <option value="Bugs Bunny">Chelsea</option>
+            <option value="Daffy Duck">Sean</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <input type="checkbox" class="service-terms">
+          <label for="service-terms">Agree to our Terms & Conditions</label>
+        </div>
+        <div class="form-row">
+        <button>Save</button>
+        </div>
+      </fieldset>
+    </main>
+    <footer>
+      <p>Copyright, 2015</p>
+    </footer>
+    <script src="acme.js"></script>
+  </body>
+</html>
