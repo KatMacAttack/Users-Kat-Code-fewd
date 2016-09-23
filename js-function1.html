@@ -174,11 +174,14 @@ function multiply (row, column, output) {
   document.querySelector(output).value = a1 * b0;
 }
 
-function multiply (row)
-var row = parseInt(document.querySelector(a1).value);
-var column = parseInt(document.querySelector(b1).value);
-document.querySelector(output).value = a1 * b0;
+function multiplyRow (row) {
+multiply (".a1", "." + row +"0", "."+ row + "1");
+multiply (".a2", "." + row +"0", "."+ row + "2");
+multiply (".a3", "." + row +"0", "."+ row + "3");
+multiply (".a4", "." + row +"0", "."+ row + "4");
+multiply (".a5", "." + row +"0", "."+ row + "5");
 }
+
 multiplyRow("b");
 multiplyRow("c");
 
