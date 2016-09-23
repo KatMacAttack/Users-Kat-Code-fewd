@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JS Exercises</title>
+    <link rel="stylesheet" href="styles.css" media="screen">
+  </head>
+  <body>
+    <h1>JS Exercises</h1>
+
+    <h2>Document Title</h2>
+
+    <label>
+      Document title:
+
+      <input type="text" value="" class="document-title">
+    </label>
+
+    <h2>Full Name</h2>
+
+    <label>
+      First name:
+      <input type="text" value="John" class="first-name">
+    </label>
+
+    <label>
+      Last name:
+      <input type="text" value="Smith" class="last-name">
+    </label>
+
+    <label>
+      Full name:
+      <input type="text" value="" class="full-name">
+    </label>
+
+    <h2>Times Table</h2>
+
+    <table class="times-table">
+      <tr>
+        <th>
+          x
+        </th>
+        <th>
+          <input type="text" value="1" class="a1">
+        </th>
+        <th>
+          <input type="text" value="2" class="a2">
+        </th>
+        <th>
+          <input type="text" value="3" class="a3">
+        </th>
+        <th>
+          <input type="text" value="4" class="a4">
+        </th>
+        <th>
+          <input type="text" value="5" class="a5">
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <input type="text" value="1" class="b0">
+        </th>
+        <th>
+          <input type="text" value="" class="b1">
+        </th>
+        <th>
+          <input type="text" value="" class="b2">
+        </th>
+        <th>
+          <input type="text" value="" class="b3">
+        </th>
+        <th>
+          <input type="text" value="" class="b4">
+        </th>
+        <th>
+          <input type="text" value="" class="b5">
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <input type="text" value="2" class="c0">
+        </th>
+        <th>
+          <input type="text" value="" class="c1">
+        </th>
+        <th>
+          <input type="text" value="" class="c2">
+        </th>
+        <th>
+          <input type="text" value="" class="c3">
+        </th>
+        <th>
+          <input type="text" value="" class="c4">
+        </th>
+        <th>
+          <input type="text" value="" class="c5">
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <input type="text" value="3" class="d0">
+        </th>
+        <th>
+          <input type="text" value="" class="d1">
+        </th>
+        <th>
+          <input type="text" value="" class="d2">
+        </th>
+        <th>
+          <input type="text" value="" class="d3">
+        </th>
+        <th>
+          <input type="text" value="" class="d4">
+        </th>
+        <th>
+          <input type="text" value="" class="d5">
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <input type="text" value="4" class="e0">
+        </th>
+        <th>
+          <input type="text" value="" class="e1">
+        </th>
+        <th>
+          <input type="text" value="" class="e2">
+        </th>
+        <th>
+          <input type="text" value="" class="e3">
+        </th>
+        <th>
+          <input type="text" value="" class="e4">
+        </th>
+        <th>
+          <input type="text" value="" class="e5">
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <input type="text" value="5" class="f0">
+        </th>
+        <th>
+          <input type="text" value="" class="f1">
+        </th>
+        <th>
+          <input type="text" value="" class="f2">
+        </th>
+        <th>
+          <input type="text" value="" class="f3">
+        </th>
+        <th>
+          <input type="text" value="" class="f4">
+        </th>
+        <th>
+          <input type="text" value="" class="f5">
+        </th>
+      </tr>
+    </table>
+
+    <script>
+    // Problem 1:
+    document.querySelector(".document-title").value = document.title;
+
+    // Problem 2:
+    var firstName = document.querySelector(".first-name").value;
+    var lastName = document.querySelector(".last-name").value;
+    document.querySelector(".full-name").value = firstName + " " + lastName;
+
+    // Problem 3:
+function multiply (row, column, output) {
+  var a1 = parseInt(document.querySelector(column).value);
+  var b0 = parseInt(document.querySelector(row).value);
+  document.querySelector(output).value = a1 * b0;
+}
+
+function multiply (row)
+var row = parseInt(document.querySelector(a1).value);
+var column = parseInt(document.querySelector(b1).value);
+document.querySelector(output).value = a1 * b0;
+}
+multiplyRow("b");
+multiplyRow("c");
+
+  multiply (".a1", ".b0", ".b1");
+  multiply (".a2", ".b0", ".b2");
+  multiply (".a3", ".b0", ".b3");
+  multiply (".a4", ".b0", ".b4");
+  multiply (".a5", ".b0", ".b5");
+
+  multiply (".a1", ".c0", ".c1");
+  multiply (".a2", ".c0", ".c2");
+  multiply (".a3", ".c0", ".c3");
+  multiply (".a4", ".c0", ".c4");
+  multiply (".a5", ".c0", ".c5");
+
+  multiply (".a1", ".d0", ".d1");
+  multiply (".a2", ".d0", ".d2");
+  multiply (".a3", ".d0", ".d3");
+  multiply (".a4", ".d0", ".d4");
+  multiply (".a5", ".d0", ".d5");
+
+  multiply (".a1", ".e0", ".e1");
+  multiply (".a2", ".e0", ".e2");
+  multiply (".a3", ".e0", ".e3");
+  multiply (".a4", ".e0", ".e4");
+  multiply (".a5", ".e0", ".e5");
+
+  multiply (".a1", ".f0", ".f1");
+  multiply (".a2", ".f0", ".f2");
+  multiply (".a3", ".f0", ".f3");
+  multiply (".a4", ".f0", ".f4");
+  multiply (".a5", ".f0", ".f5");
+
+    </script>
+  </body>
+</html>
