@@ -1,4 +1,4 @@
-<script>
+
 
 //counter function
 var i = 0;
@@ -12,10 +12,12 @@ var a = document.querySelector("a");
 a.addEventListener("click", plusOneLike);
 
 function newComment (event) {
+  console.log(event)
   event.preventDefault();
-  var comment = document.createElement("new-comment-body");
+  var comment = document.createElement("div");
   comment.setAttribute("class", "comment");
   comment.textContent = document.querySelector("textarea").value;
+
   var c = document.querySelector(".like");
   c.appendChild(comment);
   //clear the textarea after new comment is posted
@@ -24,4 +26,3 @@ function newComment (event) {
 
 var b = document.querySelector("button");
 b.addEventListener("click", newComment);
-</script>
