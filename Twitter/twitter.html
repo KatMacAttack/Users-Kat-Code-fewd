@@ -73,5 +73,41 @@
           <li> Contact Us </li>
       </nav>
     </footer>
+    <script>
+    function newComment (event){
+      var newRow = document.createElement("div");
+      newRow.setAttribute("class", "row finalrow");
+      document.querySelector("main").appendChild(newRow);
+
+      var newImg = document.createElement("img");
+      newImg.setAttribute("src", "img/steve.jpeg");
+      newImg.setAttribute("class", "responseavatar");
+      newRow.appendChild(newImg);
+
+      var newTweetContent = document.createElement("div");
+      newTweetContent.setAttribute("class", "tweetcontent");
+      newRow.appendChild(newTweetContent);
+
+      var newComment = document.createElement("p");
+      newComment.setAttribute("class", "comment");
+      newComment.textContent = "I hate javascript";
+      newTweetContent.appendChild(newComment);
+
+      var newLike = document.createElement("p");
+      newLike.setAttribute("class", "like");
+      newLike.textContent = "Like";
+      newTweetContent.appendChild(newLike);
+
+      var newLikeCount = document.createElement("span");
+      newLikeCount.setAttribute("class","likecount");
+      newLikeCount.textContent = "(69)";
+      newTweetContent.appendChild(newLikeCount);
+
+      document.querySelector(".finalrow").setAttribute("class", "row");
+    }
+var a = document.querySelector(".Tweetbutton")
+a.addEventListener("click", newComment);
+
+    </script>
   </body>
 </html>
