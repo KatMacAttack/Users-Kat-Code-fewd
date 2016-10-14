@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  <meta charset="utf-8">
+  <title>Movie Favorites</title>
+  <link rel="stylesheet" href="styles.css" media="screen">
+    <link rel="stylesheet" href="movie.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+    <title>Kat Watches Movies</title>
+  </head>
+  <h1>
+    My Favorite Movies
+  </h1>
+  <body>
+Title
+Year
+Rated
+Runtime
+Plot
+  </body>
+  <script>
+var Title = document.createElement("Title");
+var Year = document.createElement("Year");
+var Rated = document.createElement("Rated");
+var Runtime = document.createElement("Runtime");
+var Plot = document.createElement("Plot");
+
+
+$.get("http://omdbapi.com/?i=tt0103639", displayResults);
+
+function displayResults(results) {
+  console.log(results.Title);
+  console.log(results.Year);
+  console.log(results.Rated);
+  console.log(results.Runtime);
+  console.log(results.Plot);
+}
+</script>
+</html>
