@@ -3,8 +3,7 @@
     <head>
   <meta charset="utf-8">
   <title>Movie Favorites</title>
-  <link rel="stylesheet" href="styles.css" media="screen">
-    <link rel="stylesheet" href="movie.css">
+    <link rel="stylesheet" href="movie.css" media="screen">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
     <title>Kat Watches Movies</title>
@@ -12,21 +11,29 @@
   <h1>
     My Favorite Movies
   </h1>
+  <h2>
+    Click a thumbnail to find out more:
+  </h2>
+  <table>
+  <tr>
+    <td><img src="images/211.jpg" class="logo-image"></td>
+    <td><img src="images/Frank.jpg" class="logo-image"></td>
+    <td><img src="images/pb.jpg" class="logo-image"></td>
+  </tr>
+  <tr>
+  <td><img src="images/thefall.jpg" class="logo-image"></td>
+  <td><img src="images/walle.jpg" class="logo-image"></td>
+</tr>
+</table>
+
   <body>
-Title
-Year
-Rated
-Runtime
-Plot
+    <li> Title </li>
+    <li> Year </li>
+    <li> Rated </li>
+    <li> Runtime </li>
+    <li> Plot </li>
   </body>
   <script>
-var Title = document.createElement("Title");
-var Year = document.createElement("Year");
-var Rated = document.createElement("Rated");
-var Runtime = document.createElement("Runtime");
-var Plot = document.createElement("Plot");
-
-
 $.get("http://omdbapi.com/?i=tt0103639", displayResults);
 
 function displayResults(results) {
@@ -35,6 +42,21 @@ function displayResults(results) {
   console.log(results.Rated);
   console.log(results.Runtime);
   console.log(results.Plot);
+}
+
+// Assuming there's an <img class="aladdin"> on the page...
+var aladdin = document.querySelector(".aladdin");
+
+aladdin.addEventListener("click", getAladdin);
+
+// You'll have multiple event handlers...
+function getAladdin(event) {
+  $.get("http://omdbapi.com/?i=tt0103639", displayResults);
+}
+
+// ...but only one AJAX callback
+function displayResults(results) {
+  // Update the table...
 }
 </script>
 </html>
