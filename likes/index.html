@@ -34,7 +34,7 @@
         (<span class="like-count">0</span>)
       </div>
 
-      <div id="comments" class="comment">
+      <div id="comments">
 
       </div>
 
@@ -46,17 +46,15 @@
       <div class="new-comment"> </div>
     <script>
 //counter function here:
-var likeCount = 0
-function likeCount(event) {
+var likeCount = document.querySelector(".like-count");
+     addEventListener("click", likeCount);
+function like(event) {
       event.preventDefault();
   var newLike = document.createElement("like-link")
   var count = parseInt(likeCount.textContent)
       likeCount.textContent = count;
       document.querySelector(".like-count").likeCount+1;
        }
-//here's the plus one on a click
-  var count = document.querySelector(".like-count");
-       addEventListener("click", likeCount);
 
 
        //here's the add a new comment log
@@ -65,7 +63,7 @@ function newComment (event) {
         event.preventDefault();
          comment.setAttribute("class", "comment");
          comment.textContent = document.querySelector("textarea").value;
-  var c = document.querySelector(".like");
+  var c = document.querySelector("#comments");
          c.appendChild(comment);
          //clear that text area
          document.querySelector("textarea").value = "";
