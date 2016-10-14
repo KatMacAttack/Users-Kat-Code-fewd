@@ -34,7 +34,6 @@
     <li> Plot </li>
   </body>
   <script>
-
   var movieClick = document.querySelectorAll("img");
 
 for (var i = 0; i < movieClick.length; i++) {
@@ -44,11 +43,10 @@ for (var i = 0; i < movieClick.length; i++) {
 function getMovie(event) {
   var clickedMovie = event.target;
   var imdbID = clickedMovie.id;
-  var url = "https://omdbapi.com/..." + imdbID;
+  var url = "https://omdbapi.com/?i=" + imdbID;
 
   $.get(url, displayResults);
 }
-
 function displayResults(results) {
   console.log(results.Title);
   console.log(results.Year);
@@ -58,25 +56,25 @@ function displayResults(results) {
 }
 
 // Assuming there's an <img class="aladdin"> on the page...
-var Celda = document.querySelector(".celda");
+var celda = document.querySelector(".celda");
 celda.addEventListener("click", getCelda);
 
-var Frank = document.querySelector(".frank");
+var frank = document.querySelector(".frank");
 frank.addEventListener("click", getFrank);
 
-var Pb = document.querySelector(".pb");
-pb.addEventListener("click", getPb);
+var pb = document.querySelector(".pb");
+pb.addEventListener("click", getPB);
 
-var Fall = document.querySelector(".fall");
+var fall = document.querySelector(".fall");
 fall.addEventListener("click", getFall);
 
-var Walle = document.querySelector(".walle");
+var walle = document.querySelector(".walle");
 walle.addEventListener("click", getWalle);
 
 // You'll have multiple event handlers...
 
 function getCelda(event) {
-  $.get("http://omdbapi.com/?i=tt1242422", displayResults);
+  $.get("https://omdbapi.com/?i=tt1242422", displayResults);
 }
   function displayResults(results) {
     console.log(results.Title);
@@ -86,7 +84,7 @@ function getCelda(event) {
     console.log(results.Plot);
   }
 function getFrank(event) {
-  $.get("http://omdbapi.com/?i=tt1605717", displayResults);
+  $.get("https://omdbapi.com/?i=tt1605717", displayResults);
 }
 
   function displayResults(results)
@@ -98,7 +96,7 @@ function getFrank(event) {
     console.log(results.Plot);
   }
 function getPB(event) {
-  $.get("http://omdbapi.com/?i=tt0093779", displayResults);
+  $.get("https://omdbapi.com/?i=tt0093779", displayResults);
 }
   function displayResults(results) {
     console.log(results.Title);
@@ -109,7 +107,7 @@ function getPB(event) {
   }
 
 function getFall(event) {
-  $.get("http://omdbapi.com/?i=tt0460791", displayResults);
+  $.get("https://omdbapi.com/?i=tt0460791", displayResults);
 }
 function displayResults(results) {
   console.log(results.Title);
@@ -119,7 +117,7 @@ function displayResults(results) {
   console.log(results.Plot);
 }
 function getWalle(event) {
-  $.get("http://omdbapi.com/?i=tt0910970", displayResults);
+  $.get("https://omdbapi.com/?i=tt0910970", displayResults);
 }
 function displayResults(results) {
   console.log(results.Title);
