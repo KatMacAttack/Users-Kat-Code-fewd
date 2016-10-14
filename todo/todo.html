@@ -23,7 +23,7 @@
 
 var i = 0;
 
-function addTodo(event) {
+function addToDo(event) {
   var list = document.querySelector(".textInput").value;
   list = list.split(",");
   for(var j = 0; j < list.length; j++) {
@@ -45,13 +45,12 @@ function addTodo(event) {
 
     document.querySelector(".Nothing").style.display = "none";
     document.querySelector(".textInput").value = "";
-    document.querySelector(".todoNumber").textContent =  ++i;
-
+    document.querySelector(".todoValue").textContent =  ++i;
   }
 };
 
 var a = document.querySelector("button");
-a.addEventListener("click", addTodo);
+a.addEventListener("click", addToDo);
   </script>
   </body>
 </html>
