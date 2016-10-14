@@ -34,6 +34,21 @@
     <li> Plot </li>
   </body>
   <script>
+
+  var movieClick = document.querySelectorAll("img");
+
+for (var i = 0; i < movieClick.length; i++) {
+  movieClick[i].addEventListener("click",getMovie);
+}
+
+function getMovie(event) {
+  var clickedMovie = event.target;
+  var imdbID = clickedMovie.id;
+  var url = "https://omdbapi.com/?i=" + imdbID;
+
+  $.get(url, displayResults);
+}
+
 function displayResults(results) {
   console.log(results.Title);
   console.log(results.Year);
@@ -59,6 +74,7 @@ var walle = document.querySelector(".walle");
 walle.addEventListener("click", getWalle);
 
 // You'll have multiple event handlers...
+
 function getCelda(event) {
   $.get("http://omdbapi.com/?i=tt1242422", displayResults);
 }
@@ -81,8 +97,6 @@ function getFrank(event) {
     console.log(results.Runtime);
     console.log(results.Plot);
   }
-
-}
 function getPB(event) {
   $.get("http://omdbapi.com/?i=tt0093779", displayResults);
 }
