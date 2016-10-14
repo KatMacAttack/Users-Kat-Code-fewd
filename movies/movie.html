@@ -44,7 +44,7 @@ for (var i = 0; i < movieClick.length; i++) {
 function getMovie(event) {
   var clickedMovie = event.target;
   var imdbID = clickedMovie.id;
-  var url = "https://omdbapi.com/?i=" + imdbID;
+  var url = "https://omdbapi.com/..." + imdbID;
 
   $.get(url, displayResults);
 }
@@ -58,19 +58,19 @@ function displayResults(results) {
 }
 
 // Assuming there's an <img class="aladdin"> on the page...
-var celda = document.querySelector(".celda");
+var Celda = document.querySelector(".celda");
 celda.addEventListener("click", getCelda);
 
-var frank = document.querySelector(".frank");
+var Frank = document.querySelector(".frank");
 frank.addEventListener("click", getFrank);
 
-var pb = document.querySelector(".pb");
-pb.addEventListener("click", getPB);
+var Pb = document.querySelector(".pb");
+pb.addEventListener("click", getPb);
 
-var fall = document.querySelector(".fall");
+var Fall = document.querySelector(".fall");
 fall.addEventListener("click", getFall);
 
-var walle = document.querySelector(".walle");
+var Walle = document.querySelector(".walle");
 walle.addEventListener("click", getWalle);
 
 // You'll have multiple event handlers...
