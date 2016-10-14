@@ -16,12 +16,12 @@
   </h2>
   <table>
   <tr>
-    <td><img src="images/211.jpg" class="logo-image"></td>
-    <td><img src="images/Frank.jpg" class="logo-image"></td>
-    <td><img src="images/pb.jpg" class="logo-image"></td>
+    <td><img src="images/211.jpg" class="logo-image celda"></td>
+    <td><img src="images/Frank.jpg" class="logo-image frank"></td>
+    <td><img src="images/pb.jpg" class="logo-image pb"></td>
   </tr>
   <tr>
-  <td><img src="images/thefall.jpg" class="logo-image"></td>
+  <td><img src="images/thefall.jpg" class="logo-image fall"></td>
   <td><img src="images/walle.jpg" class="logo-image"></td>
 </tr>
 </table>
@@ -45,12 +45,35 @@ function displayResults(results) {
 }
 
 // Assuming there's an <img class="aladdin"> on the page...
-var aladdin = document.querySelector(".aladdin");
+var celda = document.querySelector(".celda");
+aladdin.addEventListener("click", getCelda);
 
-aladdin.addEventListener("click", getAladdin);
+var frank = document.querySelector(".frank");
+frank.addEventListener("click", getFrank);
+
+var pb = document.querySelector(".pb");
+pb.addEventListener("click", getPB);
+
+var fall = document.querySelector(".fall");
+fall.addEventListener("click", getFall);
+
+var walle = document.querySelector(".walle");
+walle.addEventListener("click", getWalle);
 
 // You'll have multiple event handlers...
-function getAladdin(event) {
+function getCelda(event) {
+  $.get("http://omdbapi.com/?i=tt0103639", displayResults);
+}
+function getFrank(event) {
+  $.get("http://omdbapi.com/?i=tt0103639", displayResults);
+}
+function getPB(event) {
+  $.get("http://omdbapi.com/?i=tt0103639", displayResults);
+}
+function getFall(event) {
+  $.get("http://omdbapi.com/?i=tt0103639", displayResults);
+}
+function getWalle(event) {
   $.get("http://omdbapi.com/?i=tt0103639", displayResults);
 }
 

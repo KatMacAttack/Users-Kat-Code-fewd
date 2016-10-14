@@ -1,11 +1,11 @@
 * {
-  background-color: #FA0AFA;
+  background-color: #333434;
   font-family: Helvetica;
   color: white;
 }
 
 h2 {
-  font-size: 10;
+  font-size: 22px;
 }
 
  body {
@@ -16,7 +16,7 @@ h2 {
    height: 283px;
    width: 197px;
  margin-top: 5px;
-  padding: 10px;
+  padding: 5px;
   float: left;
   }
 
