@@ -34,8 +34,6 @@
     <li> Plot </li>
   </body>
   <script>
-$.get("http://omdbapi.com/?i=tt0103639", displayResults);
-
 function displayResults(results) {
   console.log(results.Title);
   console.log(results.Year);
@@ -46,7 +44,7 @@ function displayResults(results) {
 
 // Assuming there's an <img class="aladdin"> on the page...
 var celda = document.querySelector(".celda");
-aladdin.addEventListener("click", getCelda);
+celda.addEventListener("click", getCelda);
 
 var frank = document.querySelector(".frank");
 frank.addEventListener("click", getFrank);
@@ -62,19 +60,59 @@ walle.addEventListener("click", getWalle);
 
 // You'll have multiple event handlers...
 function getCelda(event) {
-  $.get("http://omdbapi.com/?i=tt0103639", displayResults);
+  $.get("http://omdbapi.com/?i=tt1242422", displayResults);
 }
+  function displayResults(results) {
+    console.log(results.Title);
+    console.log(results.Year);
+    console.log(results.Rated);
+    console.log(results.Runtime);
+    console.log(results.Plot);
+  }
 function getFrank(event) {
-  $.get("http://omdbapi.com/?i=tt0103639", displayResults);
+  $.get("http://omdbapi.com/?i=tt1605717", displayResults);
+}
+
+  function displayResults(results)
+   {
+    console.log(results.Title);
+    console.log(results.Year);
+    console.log(results.Rated);
+    console.log(results.Runtime);
+    console.log(results.Plot);
+  }
+
 }
 function getPB(event) {
-  $.get("http://omdbapi.com/?i=tt0103639", displayResults);
+  $.get("http://omdbapi.com/?i=tt0093779", displayResults);
 }
+  function displayResults(results) {
+    console.log(results.Title);
+    console.log(results.Year);
+    console.log(results.Rated);
+    console.log(results.Runtime);
+    console.log(results.Plot);
+  }
+
 function getFall(event) {
-  $.get("http://omdbapi.com/?i=tt0103639", displayResults);
+  $.get("http://omdbapi.com/?i=tt0460791", displayResults);
+}
+function displayResults(results) {
+  console.log(results.Title);
+  console.log(results.Year);
+  console.log(results.Rated);
+  console.log(results.Runtime);
+  console.log(results.Plot);
 }
 function getWalle(event) {
-  $.get("http://omdbapi.com/?i=tt0103639", displayResults);
+  $.get("http://omdbapi.com/?i=tt0910970", displayResults);
+}
+function displayResults(results) {
+  console.log(results.Title);
+  console.log(results.Year);
+  console.log(results.Rated);
+  console.log(results.Runtime);
+  console.log(results.Plot);
 }
 
 // ...but only one AJAX callback
